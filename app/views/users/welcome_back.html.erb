@@ -1,0 +1,10 @@
+<h1>Welcom back, <%= @user.name %></h1>
+<hr>
+<ol>
+  <% @user.blogs.each do |blog|%>
+      <li><a href="/blogs/<%=blog.id %>"><%= blog.title %></a></li>
+  <% end %>
+</ol>
+
+
+<h4><%= link_to 'New Blog', new_blog_path %></h4>

@@ -1,0 +1,13 @@
+<h1>Welcome. Please log in</h1>
+<hr>
+
+<!-- the route in "action" is the method that will redirect the user to welcome back page. -->
+<form action="/users/user_login" method="post">
+  <input type="text" name="login_email" placeholder="Email"/>
+  <input type="password" name="password" placeholder="Password"/>
+  <input type="submit" value="Log In"/>
+</form>
+
+<h3>
+    <%= flash[:notice] %>
+</h3>
